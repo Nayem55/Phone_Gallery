@@ -1,7 +1,7 @@
 const loadData = (searchText) => {
     document.getElementById('error-message').style.display = 'none'
     document.getElementById('display-phone').style.display = 'flex'
-    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText?searchText:samsung}`
 
     fetch(url)
         .then(res => res.json())
